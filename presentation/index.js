@@ -1,6 +1,6 @@
 // Import React
 import React from "react";
-import styled from 'react-emotion';
+import styled from "react-emotion";
 
 // Import Spectacle Core tags
 import {
@@ -22,21 +22,22 @@ import {
   CodePane
 } from "spectacle";
 
+import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
+import "./assets/cobalt2.prism.css";
+
 // Require CSS
 require("normalize.css");
 
-import './assets/cobalt2.prism.css'
-import preloader from "spectacle/lib/utils/preloader";
-
 const images = {
-  customElement: require('../assets/custom_element.jpg'),
-  htmlTemplates: require('../assets/html_templates.jpg'),
-  shadowDom: require('../assets/shadow_dom.jpg'),
-}
+  customElement: require("../assets/custom_element.jpg"),
+  htmlTemplates: require("../assets/html_templates.jpg"),
+  shadowDom: require("../assets/shadow_dom.jpg"),
+  shadowTree: require("../assets/shadow_tree.jpg")
+};
 
 preloader(images);
 
@@ -53,23 +54,23 @@ const theme = createTheme({
   secondary: "Helvetica"
 });
 
-theme.screen.global['.spectacle-content'] = {
+theme.screen.global[".spectacle-content"] = {
   maxHeight: "unset"
-}
+};
 
-const CustomList = styled(List)`
+const CustomList = styled(List) `
   line-height: 1.2;
 `;
 
-const StyledListItem = styled(ListItem)`
+const StyledListItem = styled(ListItem) `
   margin-bottom: 0.6em;
   list-style-position: initial;
 `;
 
-const HeadingStyled = styled(Heading)`
+const HeadingStyled = styled(Heading) `
   margin-bottom: 0.4em;
-`
-const CodeStyled = styled(Code)`
+`;
+const CodeStyled = styled(Code) `
   font-size: inherit;
 `;
 export default class Presentation extends React.Component {
@@ -103,19 +104,27 @@ export default class Presentation extends React.Component {
         <Slide>
           <HeadingStyled size={2}>Custom Element</HeadingStyled>
           <Text>The Custom Elements specification lays the foundation for designing and using new types of DOM elements.</Text>
-          <CodePane lang="js" source={require('raw-loader!./assets/custom_element')} textSize="22" theme="external" contentEditable />
-        </Slide>
-
-        <Slide>
-          <HeadingStyled size={2}>HTML template</HeadingStyled>
-          <Text>The HTML template element specification defines how to declare fragments of markup that go unused at page load, but can be instantiated later on at runtime.</Text>
-          <CodePane lang="js" source={require('raw-loader!./assets/html_template')} textSize="22" theme="external" contentEditable />
+          { /* eslint-disable-next-line import/no-unresolved */ }
+          <CodePane lang="html" source={require("raw-loader!./assets/custom_element")} textSize="22" theme="external" contentEditable />
         </Slide>
 
         <Slide>
           <HeadingStyled size={2}>Shadow DOM</HeadingStyled>
           <Text>The shadow DOM specification defines how to use encapsulated style and markup in web components.</Text>
-          <CodePane lang="js" source={require('raw-loader!./assets/shadow_dom')} textSize="22" theme="external" contentEditable />
+          { /* eslint-disable-next-line import/no-unresolved */ }
+          <CodePane lang="html" source={require("raw-loader!./assets/shadow_dom")} textSize="22" theme="external" contentEditable />
+        </Slide>
+
+        <Slide bgColor="tertiary">
+          <HeadingStyled size={2}>Shadow DOM</HeadingStyled>
+          <Image src={images.shadowTree} />
+        </Slide>
+
+        <Slide>
+          <HeadingStyled size={2}>HTML template</HeadingStyled>
+          <Text>The HTML template element specification defines how to declare fragments of markup that go unused at page load, but can be instantiated later on at runtime.</Text>
+          { /* eslint-disable-next-line import/no-unresolved */ }
+          <CodePane lang="html" source={require("raw-loader!./assets/html_template")} textSize="22" theme="external" contentEditable />
         </Slide>
 
         <Slide bgColor="tertiary">
@@ -135,7 +144,7 @@ export default class Presentation extends React.Component {
         {/* Libraries */}
         {/* Polymer Lit HTML and Lit Element */}
 
-        </Deck>
+      </Deck>
     );
   }
 }

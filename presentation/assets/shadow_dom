@@ -1,13 +1,16 @@
-// default import (import name could be any)
-import acmModule from './src/folder_name/file_name';
-
-// named imports (name matters), curly braces
-import { teamName, team } from './src/folder_name/file_name';
-
-// alternatively
-import acmModule, { teamName, team } from './src/folder_name/file_name';
-
-acmModule();
-console.log(teamName, team);
-// Executing main stuff
-// ACM {name: "ACM", purpose: 'Apartment upgrades'}
+<html>
+<head>...</head>
+<body>
+<script defer>
+  class XComponent extends HTMLElement {
+    constructor() {
+      super();
+      this.root = this.attachShadow({ mode: 'open' });
+    }
+  }
+  customElements.define('x-component', XComponent);
+</script>
+<x-component>
+</x-component>
+</body>
+</html>
