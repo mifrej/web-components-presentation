@@ -88,8 +88,11 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary">
-          <HeadingStyled size={2} textColor="primary">Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps.</HeadingStyled>
-          <HeadingStyled size={2} textColor="tertiary">Specifications</HeadingStyled>
+          <HeadingStyled size={4} textColor="primary">Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps.</HeadingStyled>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary">
+          <HeadingStyled size={4} textColor="secondary">Specifications</HeadingStyled>
           <CustomList>
             <StyledListItem>Custom Element</StyledListItem>
             <StyledListItem>HTML template</StyledListItem>
@@ -116,12 +119,23 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="tertiary">
-          <HeadingStyled size={2}>Browsers support</HeadingStyled>
+          <HeadingStyled size={2}>Browsers support Custom Element</HeadingStyled>
           <Image src={images.customElement} />
+        </Slide>
+        <Slide bgColor="tertiary">
+          <HeadingStyled size={2}>Browsers support HTML Templates</HeadingStyled>
           <Image src={images.htmlTemplates} />
+        </Slide>
+        <Slide bgColor="tertiary">
+          <HeadingStyled size={2}>Browsers support Shadow DOM</HeadingStyled>
           <Image src={images.shadowDom} />
         </Slide>
-      </Deck>
+
+        {/* Issues */}
+        {/* Libraries */}
+        {/* Polymer Lit HTML and Lit Element */}
+
+        </Deck>
     );
   }
 }
