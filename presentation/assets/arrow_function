@@ -1,7 +1,0 @@
-/**
- * Arrow function
- */
-
-const myFunction =  () => console.log('I am executed');
-
-myFunction();

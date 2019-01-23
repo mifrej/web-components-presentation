@@ -1,8 +1,0 @@
-/**
- * ES5 style vars are hoisted,
- * compiler first declares variables as `undefined`
- */
-console.log(foo);
-// undefined
-
-var foo = 5;
