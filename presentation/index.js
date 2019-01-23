@@ -140,10 +140,26 @@ export default class Presentation extends React.Component {
           <Image src={images.shadowDom} />
         </Slide>
 
-        {/* Issues */}
+        <Slide>
+          <HeadingStyled size={2}>Pros</HeadingStyled>
+          <CustomList>
+            <StyledListItem>Web Standard driven = W3C</StyledListItem>
+            <StyledListItem></StyledListItem>
+            <StyledListItem></StyledListItem>
+          </CustomList>
+        </Slide>
+        <Slide>
+          <HeadingStyled size={2}>Cons</HeadingStyled>
+          <CustomList>
+            <StyledListItem></StyledListItem>
+            <StyledListItem></StyledListItem>
+            <StyledListItem></StyledListItem>
+          </CustomList>
+        </Slide>
+
         {/* Libraries */}
         {/* Polymer Lit HTML and Lit Element */}
-
+        {/* Links */}
       </Deck>
     );
   }

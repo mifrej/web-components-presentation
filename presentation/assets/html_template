@@ -4,7 +4,6 @@
     <h2><slot name="secondary-header"></slot></h2>
     <p><slot></slot></p>
   </template>
-  <h1>This is Global DOM header h1</h1>
   <script defer>
     const someTemplate = document.getElementById('some-template');
     class XComponent extends HTMLElement {
