@@ -148,6 +148,7 @@ export default class Presentation extends React.Component {
             <StyledListItem>Highly optimized</StyledListItem>
             <StyledListItem>Self encapsulated (shadow dom)</StyledListItem>
             <StyledListItem>Promote right separation of concerns</StyledListItem>
+            <StyledListItem>Brings closer to PWA (Progressive Web Application)</StyledListItem>
           </CustomList>
         </Slide>
         <Slide>
