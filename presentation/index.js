@@ -80,7 +80,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Web Components
+            Web Components 🚀
           </Heading>
         </Slide>
 
@@ -89,7 +89,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary">
-          <HeadingStyled size={4} textColor="primary">Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps.</HeadingStyled>
+          <HeadingStyled size={4} textColor="primary">Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags (UI elements) to use in web pages and web apps.</HeadingStyled>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary">
@@ -128,15 +128,15 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="tertiary">
-          <HeadingStyled size={2}>Browsers support Custom Element</HeadingStyled>
+          <HeadingStyled size={2}>Browsers support - Custom Element</HeadingStyled>
           <Image src={images.customElement} />
         </Slide>
         <Slide bgColor="tertiary">
-          <HeadingStyled size={2}>Browsers support HTML Templates</HeadingStyled>
+          <HeadingStyled size={2}>Browsers support - HTML Templates</HeadingStyled>
           <Image src={images.htmlTemplates} />
         </Slide>
         <Slide bgColor="tertiary">
-          <HeadingStyled size={2}>Browsers support Shadow DOM</HeadingStyled>
+          <HeadingStyled size={2}>Browsers support - Shadow DOM</HeadingStyled>
           <Image src={images.shadowDom} />
         </Slide>
 
@@ -144,22 +144,57 @@ export default class Presentation extends React.Component {
           <HeadingStyled size={2}>Pros</HeadingStyled>
           <CustomList>
             <StyledListItem>Web Standard driven = W3C</StyledListItem>
-            <StyledListItem></StyledListItem>
-            <StyledListItem></StyledListItem>
+            <StyledListItem>Native</StyledListItem>
+            <StyledListItem>Highly optimized</StyledListItem>
+            <StyledListItem>Self encapsulated (shadow dom)</StyledListItem>
+            <StyledListItem>Promote right separation of concerns</StyledListItem>
           </CustomList>
         </Slide>
         <Slide>
           <HeadingStyled size={2}>Cons</HeadingStyled>
           <CustomList>
-            <StyledListItem></StyledListItem>
-            <StyledListItem></StyledListItem>
-            <StyledListItem></StyledListItem>
+            <StyledListItem>Native Cross Browser support</StyledListItem>
+            <StyledListItem>Fine grained</StyledListItem>
+            <StyledListItem>Split to different specifications</StyledListItem>
           </CustomList>
         </Slide>
 
-        {/* Libraries */}
-        {/* Polymer Lit HTML and Lit Element */}
-        {/* Links */}
+        <Slide>
+          <HeadingStyled size={4} textColor="secondary">Libraries</HeadingStyled>
+          <CustomList>
+            <StyledListItem><Link href="https://github.com/hybridsjs/hybrids">Hybrids</Link></StyledListItem>
+            <StyledListItem><Link href="https://github.com/Polymer/lit-element">LitElement</Link></StyledListItem>
+            <StyledListItem><Link href="https://www.polymer-project.org/">Polymer</Link></StyledListItem>
+            <StyledListItem><Link href="https://skatejs.gitbooks.io/skatejs/content/">Skate.js</Link></StyledListItem>
+            <StyledListItem><Link href="http://slimjs.com/">Slim.js</Link></StyledListItem>
+            <StyledListItem><Link href="https://stenciljs.com/">Stencil</Link></StyledListItem>
+          </CustomList>
+        </Slide>
+
+        <Slide>
+          <HeadingStyled size={4} textColor="secondary">LitElement from Polymer team</HeadingStyled>
+          <CustomList>
+            <StyledListItem>Base class for creating web components</StyledListItem>
+            <StyledListItem>Uses <Link href="https://github.com/Polymer/lit-html">lit-html</Link> for template rendering</StyledListItem>
+          </CustomList>
+        </Slide>
+
+        <Slide>
+          <HeadingStyled size={4} textColor="secondary">Useful links</HeadingStyled>
+          <CustomList>
+            <StyledListItem><Link href="https://www.webcomponents.org/">WebComponents.org</Link></StyledListItem>
+            <StyledListItem><Link href="https://github.com/w3c/webcomponents">W3C spec for Web Components</Link></StyledListItem>
+            <StyledListItem><Link href="https://github.com/praveenpuglia/shadow-dom-in-depth">Shadow DOM in depth</Link></StyledListItem>
+            <StyledListItem><Link href="https://dev.to/bennypowers/lets-build-web-components-part-5-litelement-906?newly-registered-user=true#litelement-lifecycle">Let's build Web Component with lit-html</Link></StyledListItem>
+            <StyledListItem><Link href="https://www.smashingmagazine.com/2016/12/styling-web-components-using-a-shared-style-sheet/">Styling Web Components</Link></StyledListItem>
+            <StyledListItem><Link href="https://github.com/PolymerLabs/start-lit-element">lit-element Hello World application</Link></StyledListItem>
+            <StyledListItem><Link href="https://alligator.io/web-components/styling-custom-elements/">Styling Custom Element</Link></StyledListItem>
+          </CustomList>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="secondary">
+          <HeadingStyled size={4} textColor="primary">Thank You 🙏</HeadingStyled>
+        </Slide>
       </Deck>
     );
   }
